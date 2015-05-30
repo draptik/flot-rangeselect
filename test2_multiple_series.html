@@ -28,8 +28,17 @@
         data: []
     }
 
+    data[1] = {
+        color: 'green',
+        data: []
+    }
+
     for (var i = 0; i < 1000; i++) {
         data[0].data[i] = [i, Math.sin(i / 50)];
+    }
+
+    for (var i = 0; i < 1000; i++) {
+        data[1].data[i] = [i, Math.cos(i / 50)];
     }
 
     pGraph = $.plot("#biggraph", data, {
